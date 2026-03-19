@@ -51,14 +51,28 @@
         uni_dot: uni_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp KP_N0 &kp KP_N0 &kp KP_N2 &kp E &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N2 &kp E>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
             label = "UNI_DOT";
         };
 
         uni_comma: uni_comma {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp KP_N0 &kp KP_N0 &kp KP_N2 &kp C &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N2 &kp C>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
             label = "UNI_COMMA";
         };
     };
@@ -90,10 +104,10 @@
 
         lower_layer {
             bindings = <
-&kp GRAVE  &none      &none      &none        &none     &none        &none      &kp N7   &kp N8   &kp N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
-&kp TAB    &none      &none      &none        &kp LBKT  &kp RBKT     &none      &kp N4   &kp N5   &kp N6  &kp KP_PLUS      &kp KP_MINUS
-&kp LSHFT  &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC     &kp N0     &kp N1   &kp N2   &kp N3  &kp KP_COMMA     &kp DOT
-                                 &mo ADJ      &mo LWR   &kp SPACE    &kp ENTER  &mo LWR  &mo RSE
+&kp GRAVE  &none      &none      &none        &none     &none       &none   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp TAB    &none      &none      &none        &kp LBKT  &kp RBKT    &none   &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
+&kp LSHFT  &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_COMMA     &kp DOT
+                                 &trans       &trans    &trans      &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &scroll_l_r>;
@@ -101,10 +115,10 @@
 
         raise_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3     &kp F4       &kp F5   &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11  &kp F12
-&none   &kp INS  &kp PSCRN  &kp K_CMENU  &none    &none        &kp PG_UP  &kp HOME  &kp UP    &kp END    &none    &none
-&none   &none    &none      &none        &none    &none        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-                            &mo ADJ      &mo LWR  &kp SPACE    &kp ENTER  &mo LWR   &mo RSE
+&kp F1  &kp F2   &kp F3     &kp F4       &kp F5  &kp F6    &kp F7     &kp F8    &kp F9    &kp F10    &kp F11  &kp F12
+&none   &kp INS  &kp PSCRN  &kp K_CMENU  &none   &none     &kp PG_UP  &kp HOME  &kp UP    &kp END    &none    &none
+&none   &none    &none      &none        &none   &none     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
+                            &trans       &trans  &trans    &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
