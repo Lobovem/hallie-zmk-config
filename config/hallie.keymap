@@ -91,7 +91,11 @@
         comma: comma {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp &kp LS(N6) &kp &kp CAPSLOCK>;
+            bindings =
+                <&kp CAPSLOCK &kp LS(N6)>,
+                <&macro_press>,
+                <&kp CAPSLOCK>;
+
             label = "COMMA";
         };
     };
