@@ -37,7 +37,7 @@
         compatible = "zmk,combos";
 
         combo_comma {
-            bindings = <&comma>;
+            bindings = <&kp LS(N6)>;
             key-positions = <15 16>;
         };
 
@@ -86,17 +86,6 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_COMMAND &sk LEFT_SHIFT &kp N9>;
             label = "SCREEN";
-        };
-
-        comma: comma {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp CAPSLOCK &kp LS(N6)>,
-                <&macro_wait_time 2000>,
-                <&kp CAPSLOCK>;
-
-            label = "COMMA";
         };
     };
 
