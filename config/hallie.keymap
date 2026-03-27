@@ -91,7 +91,7 @@
         save_macro: save_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp S>;
+            bindings = <&sk LEFT_COMMAND &sk LEFT_SHIFT &kp S>;
             label = "SAVE_MACRO";
         };
     };
